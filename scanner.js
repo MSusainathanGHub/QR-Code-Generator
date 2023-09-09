@@ -33,26 +33,27 @@ try {
     if(imageContainer.hasChildNodes()){
         imageContainer.removeChild(imageContainer.childNodes[0]);
     }
-
-    /* Create the QR code */
+    else{
+        /* Create the QR code */
         const parent = document.createElement("div");
         parent.classList.add("parent");
         const img = document.createElement('img');
         img.src = url;
         parent.appendChild(img);
         imageContainer.appendChild(parent);
-    
-    /*Create the download button */
-    const anchor = document.createElement('a');
-    anchor.href= url;
-    anchor.classList.add("btn");
-    anchor.classList.add("btn-primary");
-    anchor.classList.add("btn-lg");
-    anchor.classList.add("links");
-    anchor.innerHTML ="Download";
-    anchor.setAttribute('download', '');
-    document.body.appendChild(anchor);
- 
+
+        /*Create the download button */
+        const anchor = document.createElement('a');
+        anchor.href= url;
+        anchor.classList.add("btn");
+        anchor.classList.add("btn-primary");
+        anchor.classList.add("btn-lg");
+        anchor.classList.add("links");
+        anchor.innerHTML ="Download";
+        anchor.setAttribute('download', '');
+        document.body.appendChild(anchor);
+    }
+
 }
     catch (error) {
         console.error(error);
