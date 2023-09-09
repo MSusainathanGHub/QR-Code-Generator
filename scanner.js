@@ -4,7 +4,7 @@ let display = document.querySelector(".display");
 let download = document.querySelector(".download");
 let container = document.querySelector("img-container");
 let imageContainer = document.querySelector(".img-container");
-
+let sample = document.querySelector(".img-container");
 
 function createScanner(){
     getScanner();
@@ -17,7 +17,6 @@ let height = document.querySelector(".height").value;
 let qrcolor = document.querySelector(".qrcolor").value;
 let bgcolor = document.querySelector(".bgcolor").value;
 let formats = document.querySelector(".formats").value;
-
 
 let color = qrcolor.substring(1);
 let backcolor = bgcolor.substring(1);
@@ -53,10 +52,6 @@ try {
     anchor.innerHTML ="Download";
     anchor.setAttribute('download', '');
     document.body.appendChild(anchor);
-
-
-    sample.href=url;
-    anchor.setAttribute('download', '');
  
 }
     catch (error) {
